@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FastPayment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z2a-7f-Zwd">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pap-is-U7y">
+                                        <rect key="frame" x="182.5" y="298.5" width="49" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p35-ST-jGp">
+                                        <rect key="frame" x="176.5" y="327" width="61" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rbf-Jw-LpI">
+                                        <rect key="frame" x="192" y="356" width="30" height="30"/>
+                                        <state key="normal" title="Pay"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="Rbf-Jw-LpI" firstAttribute="top" secondItem="p35-ST-jGp" secondAttribute="bottom" constant="8" symbolic="YES" id="NwR-Yb-olZ"/>
+                                    <constraint firstItem="Pap-is-U7y" firstAttribute="centerX" secondItem="Z2a-7f-Zwd" secondAttribute="centerX" id="Qr5-PN-vjb"/>
+                                    <constraint firstItem="Rbf-Jw-LpI" firstAttribute="centerX" secondItem="Z2a-7f-Zwd" secondAttribute="centerX" id="bRX-r9-Dpq"/>
+                                    <constraint firstItem="p35-ST-jGp" firstAttribute="centerX" secondItem="Z2a-7f-Zwd" secondAttribute="centerX" id="c9H-fU-3Mr"/>
+                                    <constraint firstItem="p35-ST-jGp" firstAttribute="top" secondItem="Pap-is-U7y" secondAttribute="bottom" constant="7.5" id="won-Jh-emO"/>
+                                    <constraint firstItem="Pap-is-U7y" firstAttribute="centerY" secondItem="Z2a-7f-Zwd" secondAttribute="centerY" constant="-100" id="zyO-z9-oZ6"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Z2a-7f-Zwd" secondAttribute="trailing" id="GM4-pc-FQg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Z2a-7f-Zwd" secondAttribute="bottom" id="bEw-iy-fXg"/>
+                            <constraint firstItem="Z2a-7f-Zwd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qQ5-vJ-ffH"/>
+                            <constraint firstItem="Z2a-7f-Zwd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="xq3-aD-NOs"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pay" destination="Rbf-Jw-LpI" id="vlk-PD-SXo"/>
+                        <outlet property="product" destination="p35-ST-jGp" id="iE4-Lh-v9y"/>
+                        <outlet property="status" destination="Pap-is-U7y" id="d9a-nU-0OT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-235" y="81"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
